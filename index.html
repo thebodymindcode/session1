@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персональная сессия | Дарья Ростовцева</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --white: #fafafa;
+            --cream: #f7f5f2;
+            --gold: #b8956e;
+            --gold-light: #d4bc96;
+            --gold-dark: #8a6d4a;
+            --gray: #6b6b6b;
+            --gray-light: #a0a0a0;
+            --gray-dark: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.8;
+            font-weight: 400;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(250, 250, 250, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.4s ease;
+        }
+
+        header.scrolled {
+            padding: 1rem 5%;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--black);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+
+        .header-cta {
+            background: transparent;
+            color: var(--black);
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            border: 1px solid var(--black);
+            transition: all 0.4s ease;
+        }
+
+        .header-cta:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 140px 5% 100px;
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(184, 149, 110, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease 0.1s both;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 3rem;
+            line-height: 1.9;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: var(--black);
+            color: var(--white);
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .hero-cta:hover {
+            background: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(0,0,0,0.08);
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--gold);
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            color: var(--gray);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+        }
+
+        /* Section Base */
+        section {
+            padding: 120px 5%;
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            display: block;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        /* Myths Section */
+        .myths {
+            background: var(--white);
+        }
+
+        .myths-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .myth {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 2rem;
+            padding: 2.5rem;
+            background: var(--cream);
+            border-left: 3px solid transparent;
+            transition: all 0.4s ease;
+        }
+
+        .myth:hover {
+            border-left-color: var(--gold);
+            transform: translateX(10px);
+        }
+
+        .myth.truth {
+            background: var(--black);
+            color: var(--white);
+            border-left-color: var(--gold);
+        }
+
+        .myth-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .myth-icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .myth-icon .cross {
+            stroke: #c44;
+            stroke-width: 2;
+        }
+
+        .myth-icon .check {
+            stroke: var(--gold);
+            stroke-width: 2;
+        }
+
+        .myth h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .myth p {
+            font-size: 0.95rem;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .myth.truth p {
+            color: var(--gray-light);
+        }
+
+        /* Pain Section */
+        .pain {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .pain .section-title {
+            color: var(--white);
+        }
+
+        .pain-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .pain-card {
+            background: var(--black);
+            padding: 3rem;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .pain-card:hover {
+            background: var(--gray-dark);
+        }
+
+        .pain-card::before {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            left: 3rem;
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .pain-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+            color: var(--white);
+        }
+
+        .pain-card p {
+            font-size: 0.9rem;
+            color: var(--gray-light);
+            line-height: 1.8;
+        }
+
+        /* Science Section */
+        .science {
+            background: var(--cream);
+        }
+
+        .science-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .science-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .science-intro p {
+            font-size: 1.05rem;
+            color: var(--gray);
+            line-height: 1.9;
+        }
+
+        .infographic {
+            background: var(--white);
+            padding: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .infographic-title {
+            text-align: center;
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+        }
+
+        .brain-diagram {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .brain-visual {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        .brain-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .brain-metrics {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .metric {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1rem 1.5rem;
+            background: var(--cream);
+            min-width: 280px;
+        }
+
+        .metric-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--black);
+            flex-shrink: 0;
+        }
+
+        .metric-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .metric-content h4 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .metric-content p {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        .science-quote {
+            text-align: center;
+            padding: 3rem;
+            background: var(--white);
+            border-left: 3px solid var(--gold);
+        }
+
+        .science-quote blockquote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--gray-dark);
+            max-width: 700px;
+            margin: 0 auto 1rem;
+        }
+
+        .science-quote cite {
+            font-size: 0.8rem;
+            color: var(--gray);
+            font-style: normal;
+            letter-spacing: 0.1em;
+        }
+
+        /* Process Section */
+        .process {
+            background: var(--white);
+        }
+
+        .process-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: linear-gradient(to bottom, var(--gold), transparent);
+        }
+
+        .process-step {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--cream);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gold);
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-content {
+            padding-top: 0.5rem;
+        }
+
+        .step-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .step-content p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Transformation */
+        .transformation {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .transformation .section-title {
+            color: var(--white);
+        }
+
+        .transformation-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .transformation-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .transformation-col {
+            padding: 2.5rem;
+        }
+
+        .transformation-col.before {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .transformation-col.after {
+            background: rgba(184, 149, 110, 0.1);
+            border: 1px solid var(--gold);
+        }
+
+        .col-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .before .col-label {
+            color: var(--gray);
+        }
+
+        .after .col-label {
+            color: var(--gold);
+        }
+
+        .transformation-list {
+            list-style: none;
+        }
+
+        .transformation-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .transformation-list li::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            margin-top: 6px;
+            flex-shrink: 0;
+        }
+
+        .before .transformation-list li::before {
+            background: var(--gray);
+        }
+
+        .after .transformation-list li::before {
+            background: var(--gold);
+        }
+
+        .transformation-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 100px;
+        }
+
+        .transformation-arrow svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--gold);
+            stroke-width: 1;
+        }
+
+        .transformation-case {
+            margin-top: 4rem;
+            padding: 3rem;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+
+        .case-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--gold-light);
+            max-width: 700px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .case-author {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* About Section */
+        .about {
+            background: var(--cream);
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image-placeholder {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: linear-gradient(135deg, var(--gray-dark) 0%, var(--black) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--gold);
+            color: var(--black);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .about-badge-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            display: block;
+            line-height: 1;
+        }
+
+        .about-badge-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-top: 0.3rem;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text h2 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .about-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--gray-dark);
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--gold);
+        }
+
+        .about-text p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 2rem;
+        }
+
+        .credential {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--white);
+            font-size: 0.8rem;
+        }
+
+        .credential svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        /* Topics */
+        .topics {
+            background: var(--white);
+        }
+
+        .topics-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: rgba(0,0,0,0.08);
+        }
+
+        .topic {
+            background: var(--white);
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .topic:hover {
+            background: var(--cream);
+        }
+
+        .topic-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .topic-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .topic h3 {
+            font-size: 1.1rem;
+        }
+
+        /* Reviews */
+        .reviews {
+            background: var(--cream);
+        }
+
+        .reviews-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .review {
+            background: var(--white);
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .review::before {
+            content: '"';
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            color: var(--gold);
+            opacity: 0.2;
+            line-height: 1;
+        }
+
+        .review-text {
+            font-size: 0.95rem;
+            color: var(--gray-dark);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .review-avatar {
+            width: 45px;
+            height: 45px;
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .review-info h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .review-info p {
+            font-size: 0.75rem;
+            color: var(--gray);
+        }
+
+        /* Pricing */
+        .pricing {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .pricing .section-title {
+            color: var(--white);
+        }
+
+        .pricing-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--gray-dark);
+            padding: 4rem;
+            text-align: center;
+            position: relative;
+            border: 1px solid var(--gold);
+        }
+
+        .pricing-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-title {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-subtitle {
+            font-size: 0.9rem;
+            color: var(--gray-light);
+            margin-bottom: 2rem;
+        }
+
+        .pricing-price {
+            margin-bottom: 2.5rem;
+        }
+
+        .price-old {
+            font-size: 1.2rem;
+            color: var(--gray);
+            text-decoration: line-through;
+            margin-right: 1rem;
+        }
+
+        .price-new {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--gold);
+        }
+
+        .price-currency {
+            font-size: 1.5rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2.5rem;
+        }
+
+        .pricing-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .pricing-features li svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 2;
+            flex-shrink: 0;
+        }
+
+        .pricing-cta {
+            display: block;
+            background: var(--gold);
+            color: var(--black);
+            padding: 1.3rem 2rem;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+        }
+
+        .pricing-cta:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .pricing-note {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* FAQ */
+        .faq {
+            background: var(--white);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem 0;
+            background: none;
+            border: none;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--black);
+        }
+
+        .faq-question svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--gold);
+            stroke-width: 2;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question svg {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            padding-bottom: 1.5rem;
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: var(--cream);
+            text-align: center;
+            padding: 100px 5%;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 2.5rem;
+        }
+
+        .final-cta .hero-cta {
+            animation: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--gray);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .footer-support {
+            margin-bottom: 2rem;
+        }
+
+        .footer-support a {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-legal {
+            font-size: 0.75rem;
+            color: var(--gray);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .about-content,
+            .transformation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .transformation-arrow {
+                padding: 2rem 0;
+                transform: rotate(90deg);
+            }
+
+            .brain-diagram {
+                flex-direction: column;
+            }
+
+            .topics-grid,
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pain-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 80px 5%;
+            }
+
+            .myth {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .process-step {
+                grid-template-columns: 1fr;
+            }
+
+            .process-timeline::before {
+                display: none;
+            }
+
+            .pricing-card {
+                padding: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Дарья Ростовцева</a>
+        <a href="https://t.me/TheBodyMindCode_support" class="header-cta">Записаться</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-label">Персональная трансформация</span>
+            <h1>Одна сессия.<br><em>Точка невозврата.</em></h1>
+            <p class="hero-desc">
+                60–90 минут, которые показывают то, что вы не видели годами.<br>
+                Не разговор о проблемах — работа с корнем.
+            </p>
+            <a href="https://t.me/TheBodyMindCode_support" class="hero-cta">Записаться на сессию</a>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-value">10+</span>
+                    <span class="stat-label">Лет практики</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">500+</span>
+                    <span class="stat-label">Сессий</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">1</span>
+                    <span class="stat-label">Сессия до сдвига</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="myths">
+        <span class="section-label">Разоблачение</span>
+        <h2 class="section-title">Почему годы проработок не дают результата</h2>
+        <div class="myths-grid">
+            <div class="myth">
+                <div class="myth-icon">
+                    <svg viewBox="0 0 24 24" fill="none"><line x1="4" y1="4" x2="20" y2="20" class="cross"/><line x1="20" y1="4" x2="4" y2="20" class="cross"/></svg>
+                </div>
+                <div>
+                    <h3>Проблема не в количестве терапии</h3>
+                    <p>Можно ходить к психологу 5 лет и остаться на месте. Потому что классическая терапия работает с симптомами, а не с корнем. Вы бесконечно обсуждаете одно и то же — и ничего не меняется.</p>
+                </div>
+            </div>
+            <div class="myth">
+                <div class="myth-icon">
+                    <svg viewBox="0 0 24 24" fill="none"><line x1="4" y1="4" x2="20" y2="20" class="cross"/><line x1="20" y1="4" x2="4" y2="20" class="cross"/></svg>
+                </div>
+                <div>
+                    <h3>Проблема не в отсутствии знаний</h3>
+                    <p>Вы прочитали книги. Прошли марафоны. Знаете про травмы, установки, сценарии. Но знание не равно изменение. Между «понимаю» и «живу иначе» — пропасть.</p>
+                </div>
+            </div>
+            <div class="myth">
+                <div class="myth-icon">
+                    <svg viewBox="0 0 24 24" fill="none"><line x1="4" y1="4" x2="20" y2="20" class="cross"/><line x1="20" y1="4" x2="4" y2="20" class="cross"/></svg>
+                </div>
+                <div>
+                    <h3>Проблема не в вас</h3>
+                    <p>«Может, я просто такая» — это не правда. Это программа, которую можно найти и выключить. Вопрос не в характере — в том, видит ли специалист настоящую причину.</p>
+                </div>
+            </div>
+            <div class="myth truth">
+                <div class="myth-icon">
+                    <svg viewBox="0 0 24 24" fill="none"><polyline points="4 12 9 17 20 6" class="check"/></svg>
+                </div>
+                <div>
+                    <h3>Решение — найти точку, где всё началось</h3>
+                    <p>Одно решение. Один момент. Одна программа, которая управляет всеми вашими выборами. Когда вы её видите — происходит сдвиг. Не понимание. Сдвиг. За одну сессию можно сделать то, что не получалось годами.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pain">
+        <span class="section-label">Знакомо?</span>
+        <h2 class="section-title">Симптомы, которые приводят ко мне</h2>
+        <div class="pain-grid">
+            <div class="pain-card">
+                <h3>Бесконечный цикл</h3>
+                <p>Проходите обучения, делаете практики — а через месяц снова в той же точке. Мотивация угасает. История повторяется.</p>
+            </div>
+            <div class="pain-card">
+                <h3>Знаете, но не делаете</h3>
+                <p>Понимаете, что нужно. Видите решение. Но что-то внутри не даёт. Как будто рука на тормозе, который вы не контролируете.</p>
+            </div>
+            <div class="pain-card">
+                <h3>Деньги на ветер</h3>
+                <p>200К+ на психологов, коучей, марафоны. Понимание выросло. Жизнь — нет. Результат: знаете больше, но живёте так же.</p>
+            </div>
+            <div class="pain-card">
+                <h3>Фоновая пустота</h3>
+                <p>Вроде всё есть. А внутри — ничего. Радость не приходит. Энергии нет. Просто тянете дни, не понимая зачем.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="science">
+        <span class="section-label">Почему это работает</span>
+        <h2 class="section-title">Нейробиология быстрых изменений</h2>
+        <div class="science-content">
+            <div class="science-intro">
+                <p>Большинство методов работают с сознанием — с тем, что вы думаете. Но решения принимаются глубже. В подсознании. В теле. В нейронных связях, которые сформировались до того, как вы научились говорить.</p>
+            </div>
+            <div class="infographic">
+                <h3 class="infographic-title">Что происходит на сессии</h3>
+                <div class="brain-diagram">
+                    <div class="brain-visual">
+                        <svg class="brain-svg" viewBox="0 0 300 300">
+                            <circle cx="150" cy="150" r="120" fill="none" stroke="#e8e4df" stroke-width="1"/>
+                            <circle cx="150" cy="150" r="90" fill="none" stroke="#d4bc96" stroke-width="0.5"/>
+                            <circle cx="150" cy="150" r="60" fill="none" stroke="#b8956e" stroke-width="1"/>
+                            <line x1="150" y1="30" x2="150" y2="90" stroke="#b8956e" stroke-width="0.5" stroke-dasharray="4"/>
+                            <line x1="270" y1="150" x2="210" y2="150" stroke="#b8956e" stroke-width="0.5" stroke-dasharray="4"/>
+                            <line x1="150" y1="270" x2="150" y2="210" stroke="#b8956e" stroke-width="0.5" stroke-dasharray="4"/>
+                            <line x1="30" y1="150" x2="90" y2="150" stroke="#b8956e" stroke-width="0.5" stroke-dasharray="4"/>
+                            <circle cx="150" cy="150" r="8" fill="#b8956e"/>
+                            <circle cx="150" cy="150" r="4" fill="#0a0a0a"/>
+                            <text x="150" y="20" text-anchor="middle" font-family="Raleway" font-size="10" fill="#6b6b6b">СОЗНАНИЕ</text>
+                            <text x="285" y="155" text-anchor="start" font-family="Raleway" font-size="10" fill="#6b6b6b">ТЕЛО</text>
+                            <text x="150" y="290" text-anchor="middle" font-family="Raleway" font-size="10" fill="#6b6b6b">ПОДСОЗНАНИЕ</text>
+                            <text x="15" y="155" text-anchor="start" font-family="Raleway" font-size="10" fill="#6b6b6b">ЭНЕРГИЯ</text>
+                            <text x="150" y="148" text-anchor="middle" font-family="Cormorant Garamond" font-size="12" fill="#b8956e">КОРЕНЬ</text>
+                        </svg>
+                    </div>
+                    <div class="brain-metrics">
+                        <div class="metric">
+                            <div class="metric-icon">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            </div>
+                            <div class="metric-content">
+                                <h4>Мгновенный доступ</h4>
+                                <p>К точке, где сформировалась программа</p>
+                            </div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-icon">
+                                <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            </div>
+                            <div class="metric-content">
+                                <h4>Работа с энергией</h4>
+                                <p>Не только разговор — трансформация в теле</p>
+                            </div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div class="metric-content">
+                                <h4>Результат сразу</h4>
+                                <p>Сдвиг происходит на сессии, не через месяцы</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="science-quote">
+                <blockquote>«95% решений принимает подсознание. За 6 секунд до того, как вы осознаёте выбор — он уже сделан»</blockquote>
+                <cite>— Институт Макса Планка, исследования нейровизуализации</cite>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <span class="section-label">Как это работает</span>
+        <h2 class="section-title">Три этапа сессии</h2>
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h3>Вижу</h3>
+                    <p>Не то, что вы говорите — а то, что за этим. Паттерны, которые вы не замечаете. Программы, которые управляют выборами. Точку, где всё началось.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h3>Достаём</h3>
+                    <p>Корень проблемы. Решение или момент, который запустил цепочку. Это не анализ — это прямой доступ к тому, что скрыто.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h3>Меняем</h3>
+                    <p>Не «понимание» — конкретный сдвиг. Работа с энергией, телом, подсознанием. Вы выходите другим человеком. Это чувствуется сразу.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="transformation">
+        <span class="section-label">Трансформация</span>
+        <h2 class="section-title">До и после одной сессии</h2>
+        <div class="transformation-content">
+            <div class="transformation-grid">
+                <div class="transformation-col before">
+                    <span class="col-label">До сессии</span>
+                    <ul class="transformation-list">
+                        <li>Бесконечные проработки без результата</li>
+                        <li>Понимание есть — изменений нет</li>
+                        <li>Фоновая тревога и пустота</li>
+                        <li>Ощущение «хожу по кругу»</li>
+                        <li>Не понимаю, что меня держит</li>
+                    </ul>
+                </div>
+                <div class="transformation-arrow">
+                    <svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="14 7 19 12 14 17"/></svg>
+                </div>
+                <div class="transformation-col after">
+                    <span class="col-label">После сессии</span>
+                    <ul class="transformation-list">
+                        <li>Вижу корень — и он больше не управляет</li>
+                        <li>Понимание превращается в действие</li>
+                        <li>Спокойствие и ясность</li>
+                        <li>Выход из цикла — новые решения</li>
+                        <li>Знаю, что делать дальше</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="transformation-case">
+                <p class="case-quote">«За 15 лет терапии никто не увидел того, что ты увидела за 60 минут. Я потратила 200К на психологов. Результат дала одна сессия с тобой. Я наконец живу, а не выживаю.»</p>
+                <p class="case-author">Марина, 37 лет</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="daria.jpg" alt="Дарья Ростовцева" style="width: 100%; display: block;">
+                <div class="about-badge">
+                    <span class="about-badge-value">10+</span>
+                    <span class="about-badge-label">Лет в практике</span>
+                </div>
+            </div>
+            <div class="about-text">
+                <h2>Я не читала об этом.<br><em>Я это прожила.</em></h2>
+                <p class="about-quote">Декрет. 8 500₽ в месяц. Плюс 20 кг. Ребёнок на руках. Мужчина, который сказал «ребёнку нужна любовь» вместо денег на памперсы.</p>
+                <p>Я не просто выбралась. Я построила жизнь мечты. Тело в идеале. Переезд к морю. Бизнес. Свобода. 14 стран мира.</p>
+                <p>И теперь я провожу других тем же путём — только быстрее. Потому что знаю, где искать.</p>
+                <div class="credentials">
+                    <div class="credential"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>CF Access Consciousness</div>
+                    <div class="credential"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>500+ сессий</div>
+                    <div class="credential"><svg viewBox="0 0 24 24"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/></svg>Тета-хилинг</div>
+                    <div class="credential"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Нумерология</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="topics">
+        <span class="section-label">Запросы</span>
+        <h2 class="section-title">С чем работаю</h2>
+        <div class="topics-grid">
+            <div class="topic">
+                <div class="topic-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                <h3>Деньги и реализация</h3>
+            </div>
+            <div class="topic">
+                <div class="topic-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+                <h3>Отношения</h3>
+            </div>
+            <div class="topic">
+                <div class="topic-icon"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+                <h3>Тело и здоровье</h3>
+            </div>
+            <div class="topic">
+                <div class="topic-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+                <h3>Энергия и состояние</h3>
+            </div>
+            <div class="topic">
+                <div class="topic-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+                <h3>«Ничего не меняется»</h3>
+            </div>
+            <div class="topic">
+                <div class="topic-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+                <h3>Самореализация</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <span class="section-label">Отзывы</span>
+        <h2 class="section-title">После сессий</h2>
+        <div class="reviews-grid">
+            <div class="review">
+                <p class="review-text">Первый раз кто-то увидел настоящую меня. За час — больше, чем за 2 года терапии. Как будто сняли пелену с глаз.</p>
+                <div class="review-author">
+                    <div class="review-avatar">А</div>
+                    <div class="review-info"><h4>Анна</h4><p>Предприниматель, 34 года</p></div>
+                </div>
+            </div>
+            <div class="review">
+                <p class="review-text">Одна фраза — и я поняла, почему 10 лет бегала по кругу. Это невозможно объяснить. Это нужно пережить.</p>
+                <div class="review-author">
+                    <div class="review-avatar">Е</div>
+                    <div class="review-info"><h4>Елена</h4><p>Маркетолог, 29 лет</p></div>
+                </div>
+            </div>
+            <div class="review">
+                <p class="review-text">Был скептиком. Но после сессии — как гора с плеч. Отношения с женой изменились за неделю. Без скандалов.</p>
+                <div class="review-author">
+                    <div class="review-avatar">Д</div>
+                    <div class="review-info"><h4>Дмитрий</h4><p>IT-директор, 41 год</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <span class="section-label">Инвестиция в себя</span>
+        <h2 class="section-title">Записаться на сессию</h2>
+        <div class="pricing-card">
+            <div class="pricing-label">Персональная работа</div>
+            <h3 class="pricing-title">Сессия с Дарьей</h3>
+            <p class="pricing-subtitle">60–90 минут глубокой трансформации</p>
+            <div class="pricing-price">
+                <span class="price-old">15 000 ₽</span>
+                <span class="price-new">7 990 <span class="price-currency">₽</span></span>
+            </div>
+            <ul class="pricing-features">
+                <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Работа с вашим конкретным запросом</li>
+                <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Диагностика скрытых блоков и программ</li>
+                <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Трансформация прямо на сессии</li>
+                <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Инструменты для самостоятельной работы</li>
+                <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Запись сессии — ваша навсегда</li>
+            </ul>
+            <a href="https://t.me/TheBodyMindCode_support" class="pricing-cta">Записаться сейчас</a>
+            <p class="pricing-note">Напишите «СЕССИЯ» — согласуем время</p>
+        </div>
+    </section>
+
+    <section class="faq">
+        <span class="section-label">Вопросы</span>
+        <h2 class="section-title">Всё, что нужно знать</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <button class="faq-question">Как проходит сессия?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="faq-answer"><p>Онлайн, Zoom или Telegram. 60–90 минут. Это не разговор «про жизнь» — это точечная работа с корнем вашего запроса. Вы говорите о ситуации, я вижу, что за ней стоит, и мы это трансформируем. Сдвиг ощущается уже на сессии.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Когда будет результат?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="faq-answer"><p>Сдвиг — прямо на сессии. Это ощущается как «ага!», как снятие груза, как внезапная ясность. Внешние изменения разворачиваются в течение дней и недель — когда вы начинаете действовать из нового состояния.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Чем это отличается от психолога?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="faq-answer"><p>Психолог работает с сознанием — с тем, что вы думаете. Я работаю глубже: с подсознанием, телом, энергией. Там, где формируются настоящие решения. Классическая терапия может длиться годами. Здесь сдвиг происходит за одну сессию.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Подходит мужчинам?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="faq-answer"><p>Да. Бизнес, отношения, состояние, реализация — эти запросы универсальны. Среди клиентов — предприниматели, руководители, айтишники. Работаем с сутью, не с гендером. Мужчины часто отмечают, что здесь нет «воды» — только конкретика и результат.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Что делать, если я скептик?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="faq-answer"><p>Скептицизм — это нормально. Большинство клиентов приходят с сомнениями. Мне не нужна ваша вера — нужна готовность попробовать. Результат ощущается в теле, а не в голове. Когда сдвиг происходит — вы это чувствуете, независимо от того, во что верили до этого.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Сколько сессий нужно?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="faq-answer"><p>Часто достаточно одной. Это зависит от глубины запроса. Некоторые приходят снова через месяцы — уже с новым уровнем вопросов. Но я не создаю зависимость от себя. Цель — дать вам инструменты и состояние, с которыми вы идёте дальше сами.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Можно ли решить несколько запросов за одну сессию?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="faq-answer"><p>Обычно мы работаем с одним ключевым запросом. Но часто оказывается, что разные проблемы имеют общий корень. Убираем его — и несколько сфер начинают меняться одновременно. Деньги, отношения, самооценка — часто это звенья одной цепи.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Что если ничего не изменится?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="faq-answer"><p>За 500+ сессий такого не было. Сдвиг происходит всегда — вопрос в его глубине. Иногда это мощный инсайт. Иногда — тихое понимание, которое разворачивается в действия. Если вы честно готовы к изменениям — они произойдут.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Как записаться?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="faq-answer"><p>Напишите в Telegram @TheBodyMindCode_support — слово «СЕССИЯ». Мы свяжемся, уточним ваш запрос и согласуем удобное время. Обычно сессия проходит в течение 3-5 дней после обращения.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <h2>Можешь искать ещё год.<br>Или увидеть за 60 минут.</h2>
+        <p>Одна сессия. Одна точка. Всё меняется.</p>
+        <a href="https://t.me/TheBodyMindCode_support" class="hero-cta">Записаться на сессию</a>
+    </section>
+
+    <footer>
+        <div class="footer-support"><p>Поддержка: <a href="https://t.me/TheBodyMindCode_support">@TheBodyMindCode_support</a></p></div>
+        <div class="footer-legal"><p>© 2025 · ИП Ростовцева Дарья Валерьевна · ИНН: 241103415641</p></div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(section);
+        });
+
+        document.querySelector('.hero').style.opacity = '1';
+        document.querySelector('.hero').style.transform = 'translateY(0)';
+    </script>
+</body>
+</html>
