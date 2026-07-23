@@ -80,8 +80,7 @@ html.js .rv.in{opacity:1;transform:none}
 .hero-note{margin-top:18px;font-size:13.5px;color:var(--muted);max-width:34em}
 .hero-photo{position:relative;align-self:stretch;min-height:560px}
 .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:22px}
-.hero-photo::after{content:"";position:absolute;inset:0;border-radius:22px;box-shadow:inset 0 0 0 1px rgba(132,101,58,.22),inset 0 -140px 120px -60px rgba(30,21,10,.42)}
-.hero-photo .sig{position:absolute;left:28px;bottom:20px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:44px;color:#fdfaf4;text-shadow:0 2px 18px rgba(20,14,6,.5);line-height:1;z-index:1}
+.hero-photo::after{content:"";position:absolute;inset:0;border-radius:22px;box-shadow:inset 0 0 0 1px rgba(132,101,58,.22)}
 
 /* полоса фактов */
 .band{border-top:var(--hair);border-bottom:var(--hair);background:var(--paper)}
@@ -262,7 +261,6 @@ html.js .rv.in{opacity:1;transform:none}
   .band-cell+.band-cell{border-left:0;border-top:var(--hair)}
   .hero h1{font-size:clamp(40px,11vw,52px)}
   .hero-photo{min-height:420px}
-  .hero-photo .sig{font-size:34px}
   .hero .btn{width:100%}
   .answer{padding:38px 26px;border-radius:20px}
   .answer::before{font-size:220px;top:-40px}
@@ -360,7 +358,6 @@ html.js .rv.in{opacity:1;transform:none}
     </div>
     <div class="hero-photo rv">
       <img src="daria.jpg" alt="Дарья Ростовцева" fetchpriority="high">
-      <div class="sig">Дарья</div>
     </div>
   </div>
 </section>
