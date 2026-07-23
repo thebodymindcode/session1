@@ -141,7 +141,7 @@ html.js .rv.in{opacity:1;transform:none}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:60px;position:relative}
 .steps::before{content:"";position:absolute;top:31px;left:31px;right:calc((100% - 96px)/3 - 31px);height:1px;background:rgba(132,101,58,.25)}
 .step{position:relative}
-.step i{font-style:normal;width:62px;height:62px;border-radius:50%;background:var(--paper-2);border:1px solid rgba(132,101,58,.4);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gold-deep);position:relative;z-index:1}
+.step i{font-style:normal;width:62px;height:62px;border-radius:50%;background:var(--card);border:1px solid rgba(132,101,58,.4);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gold-deep);position:relative;z-index:1}
 .step h3{font-size:27px;margin:20px 0 8px}
 .step p{color:var(--ink-soft);font-size:15.5px;text-wrap:pretty}
 
@@ -266,6 +266,7 @@ html.js .rv.in{opacity:1;transform:none}
   .answer::before{font-size:220px;top:-40px}
   .ed-item{grid-template-columns:52px 1fr;gap:16px;padding:26px 0}
   .ed-item i{font-size:30px}
+  .ed-item h3{font-size:24px}
   .ba-col{padding:34px 26px}
   .price-card{padding:38px 28px}
   .price-card::before{inset:10px}
@@ -373,20 +374,20 @@ html.js .rv.in{opacity:1;transform:none}
 <section class="sec sec-2">
   <div class="wrap">
     <div class="kicker rv">Ваша тема</div>
-    <h2 class="rv">Какую боль вы хотели бы отпустить?</h2>
+    <h2 class="rv">Какую боль вы хотели бы отпустить?</h2>
     <p class="lead rv">У каждого из нас есть такая тема. Её носят в себе годами: к ней возвращаются мысли по вечерам, о ней хочется наконец поговорить с человеком, который услышит. Она есть и у сильных, и у самых благополучных. Это часть обычной жизни.</p>
     <div class="pains">
-      <div class="pain rv"><svg class="ic"><use href="#i-coins"/></svg><h3>Деньги и потолок</h3><p>доход застрял на одной и той же цифре, и пора её сдвинуть</p></div>
+      <div class="pain rv"><svg class="ic"><use href="#i-coins"/></svg><h3>Деньги и потолок</h3><p>доход застрял на одной и той же цифре, и пора её сдвинуть</p></div>
       <div class="pain rv"><svg class="ic"><use href="#i-heart"/></svg><h3>Повторы в отношениях</h3><p>сюжеты похожи один на другой, а хочется тёплой, надёжной близости</p></div>
-      <div class="pain rv"><svg class="ic"><use href="#i-leaf"/></svg><h3>Тело и вес</h3><p>килограммы, зажимы, «снова с понедельника»: забота здесь давно нужнее строгости</p></div>
+      <div class="pain rv"><svg class="ic"><use href="#i-leaf"/></svg><h3>Тело и вес</h3><p>килограммы, зажимы, «снова с понедельника»: забота здесь давно нужнее строгости</p></div>
       <div class="pain rv"><svg class="ic"><use href="#i-cloud"/></svg><h3>Нет сил с утра</h3><p>день ещё впереди, а батарейка уже почти пуста</p></div>
       <div class="pain rv"><svg class="ic"><use href="#i-pulse"/></svg><h3>Тревога фоном</h3><p>даже в спокойные дни остаётся тихое напряжение, и оно порядком надоело</p></div>
       <div class="pain rv"><svg class="ic"><use href="#i-moon"/></svg><h3>Пустота внутри</h3><p>снаружи всё неплохо, а радость куда-то ушла, и очень хочется её вернуть</p></div>
       <div class="pain rv"><svg class="ic"><use href="#i-repeat"/></svg><h3>«Ничего не меняется»</h3><p>сделано уже так много, только картина вокруг прежняя</p></div>
-      <div class="pain rv"><svg class="ic"><use href="#i-compass"/></svg><h3>Своё дело</h3><p>то самое, от чего загораются глаза, всё ещё где-то ждёт</p></div>
+      <div class="pain rv"><svg class="ic"><use href="#i-compass"/></svg><h3>Своё дело</h3><p>то самое, от чего загораются глаза, всё ещё <span class="nb">где-то</span> ждёт</p></div>
     </div>
     <div class="invite rv">
-      <p>Ко мне можно прийти с любой из этих тем. И с той, которой здесь нет. Я выслушаю, и решение мы найдём вместе.</p>
+      <p>Ко мне можно прийти с любой из этих тем. И с той, которой здесь нет. Я выслушаю, и решение мы найдём вместе.</p>
       <a class="arrow" href="#price">Записаться на сессию</a>
     </div>
   </div>
@@ -404,7 +405,7 @@ html.js .rv.in{opacity:1;transform:none}
         <div class="ed-item"><i>01</i><div><h3>Время само не лечит</h3><p>Можно ходить к психологу пять лет и остаться в той же точке. К тяжести человек просто привыкает. А тело всё помнит.</p></div></div>
         <div class="ed-item"><i>02</i><div><h3>Знаний уже достаточно</h3><p>Тридцать книг прочитано, десять курсов за плечами. Про установки и сценарии вы знаете всё. Только между «понимаю» и <span class="nb">«живу по-другому»</span> лежит пропасть.</p></div></div>
         <div class="ed-item"><i>03</i><div><h3>Мотивация быстро гаснет</h3><p>Вдохновились, начали, через три дня всё сошло на нет. Так работает сам механизм. Желание живёт на поверхности, а руль у подсознания.</p></div></div>
-        <div class="ed-item"><i>04</i><div><h3>Сила воли заканчивается</h3><p>Её хватает до вечера. Потом рука сама тянется к старому: включается давняя привычка, и она просто делает то, чему её когда-то научили.</p></div></div>
+        <div class="ed-item"><i>04</i><div><h3>Сила воли заканчивается</h3><p>Её хватает до вечера. Потом рука сама тянется к старому: включается давняя привычка, и она просто делает то, чему её <span class="nb">когда-то</span> научили.</p></div></div>
         <div class="ed-item"><i>05</i><div><h3>Даже хороший психолог видит не всё</h3><p>Беседа достаёт только то, что вы сами осознаёте. А это малая часть картины. Главное спрятано глубже, куда слова не дотягиваются.</p></div></div>
       </div>
     </div>
@@ -469,7 +470,7 @@ html.js .rv.in{opacity:1;transform:none}
           <li><svg class="ic"><use href="#i-record"/></svg><span>Привычку жить по-старому, хотя всё давно понятно</span></li>
           <li><svg class="ic"><use href="#i-record"/></svg><span>Тревожный фон, который не выключается даже в отпуске</span></li>
           <li><svg class="ic"><use href="#i-record"/></svg><span>Усталость, что просыпается вместе с вами</span></li>
-          <li><svg class="ic"><use href="#i-record"/></svg><span>Невидимый тормоз где-то внутри</span></li>
+          <li><svg class="ic"><use href="#i-record"/></svg><span>Невидимый тормоз <span class="nb">где-то</span> внутри</span></li>
         </ul>
       </div>
       <div class="ba-col ba-after">
@@ -521,7 +522,7 @@ html.js .rv.in{opacity:1;transform:none}
 <section class="sec">
   <div class="wrap">
     <div class="kicker rv">Отзывы</div>
-    <h2 class="rv">Что говорят после сессий</h2>
+    <h2 class="rv">Что говорят после сессий</h2>
     <div class="revs">
       <div class="rev rv"><p>«Первый раз кто-то увидел настоящую меня. За час больше, чем за 2 года терапии. Как будто сняли пелену с глаз.»</p><div class="rev-who"><div class="ava">А</div><span><b>Анна</b><span>предприниматель, 34 года</span></span></div></div>
       <div class="rev rv"><p>«Одна фраза, и я поняла, почему 10 лет бегала по кругу. Это невозможно объяснить, это нужно пережить.»</p><div class="rev-who"><div class="ava">Е</div><span><b>Елена</b><span>маркетолог, 29 лет</span></span></div></div>
