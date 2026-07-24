@@ -3,17 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Персональная сессия с Дарьей Ростовцевой: 60-90 минут до сдвига</title>
+<title>Персональная сессия с Дарьей Ростовцевой: 60-90 минут до сдвига</title>
 <meta name="description" content="Персональная сессия с Дарьей Ростовцевой онлайн: 60-90 минут работы с тем, что годами держит на месте. 10+ лет практики, 500+ сессий. Запись через Telegram.">
 <link rel="canonical" href="https://thebodymindcode.github.io/session1/">
 <meta property="og:title" content="Персональная сессия с Дарьей Ростовцевой">
 <meta property="og:description" content="60-90 минут, после которых видно, что держало вас годами. Онлайн, запись через Telegram.">
-<meta property="og:image" content="https://thebodymindcode.github.io/session1/hero-door.jpg">
+<meta property="og:image" content="https://thebodymindcode.github.io/session1/daria.jpg">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23120d07'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23d3b98d' text-anchor='middle'%3EД%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23231c14'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23d3b98d' text-anchor='middle'%3EД%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="hero-door.jpg" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -30,17 +29,11 @@
   --wash:#f6efe1;
   --line:rgba(132,101,58,.2);
   --hair:1px solid rgba(132,101,58,.18);
-  --night:#0d0a06;
-  --night-2:#15100a;
-  --night-ink:#f3ead9;
-  --night-soft:#c9bda6;
-  --night-hair:1px solid rgba(211,185,141,.22);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Raleway',sans-serif;background:var(--paper);color:var(--ink);line-height:1.75;font-size:16.5px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.015;pointer-events:none;z-index:9000}
-::selection{background:rgba(168,129,79,.28)}
 h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.14;letter-spacing:.005em}
 img{max-width:100%}
 a{color:inherit}
@@ -55,28 +48,17 @@ a{color:inherit}
 .btn-gold:hover{background:var(--gold-deep);transform:translateY(-1px)}
 .btn-ghost{background:transparent;color:var(--ink);border-color:rgba(132,101,58,.4)}
 .btn-ghost:hover{background:var(--wash)}
-.btn-solar{background:linear-gradient(135deg,#e2c795,#b58a51);color:#1c1409;box-shadow:0 10px 34px rgba(0,0,0,.45)}
-.btn-solar:hover{background:linear-gradient(135deg,#ecd4a6,#c49a5f);transform:translateY(-1px)}
-.arrow{display:inline-flex;align-items:center;gap:14px;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;padding:12px 0;margin:-12px 0}
+.arrow{display:inline-flex;align-items:center;gap:14px;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none}
 .arrow::after{content:"";width:44px;height:1px;background:var(--gold-deep);transition:width .25s}
 .arrow:hover::after{width:64px}
-.arrow-night{color:var(--gold-soft)}
-.arrow-night::after{background:var(--gold-soft)}
 
-/* шапка: прозрачная над кино-хиро, плотная светлая после скролла */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .35s,border-color .35s,box-shadow .35s}
-.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px}
-.brand{text-decoration:none;line-height:1.15;color:var(--night-ink);transition:color .35s}
+/* шапка: чистый шрифтовой знак */
+.nav{position:sticky;top:0;z-index:100;background:rgba(250,247,241,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:var(--hair)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{text-decoration:none;line-height:1.15}
 .brand b{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;letter-spacing:.04em;display:block}
-.brand small{display:block;font-size:9.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-top:2px;transition:color .35s}
+.brand small{display:block;font-size:9.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:2px}
 .nav .btn{padding:12px 24px;min-height:44px;font-size:12px}
-.nav .btn-nav{background:rgba(211,185,141,.14);color:var(--night-ink);border-color:rgba(211,185,141,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.nav .btn-nav:hover{background:rgba(211,185,141,.26)}
-.nav.scrolled{background:rgba(250,247,241,.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:var(--hair);box-shadow:0 6px 30px rgba(35,28,20,.06)}
-.nav.scrolled .brand{color:var(--ink)}
-.nav.scrolled .brand small{color:var(--muted)}
-.nav.scrolled .btn-nav{background:var(--ink);color:#f6efe1;border-color:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
-.nav.scrolled .btn-nav:hover{background:var(--gold-deep)}
 
 .sec{padding:116px 0}
 .sec-2{background:var(--paper-2)}
@@ -88,28 +70,25 @@ h2{font-size:clamp(34px,4.8vw,54px);max-width:18em;text-wrap:pretty}
 html.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
 html.js .rv.in{opacity:1;transform:none}
 
-/* кино-хиро: дверь со светом */
-.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;background:var(--night);color:var(--night-ink);overflow:hidden}
-.hero-bg{position:absolute;inset:-8% 0;background:url(hero-door.jpg) 68% center/cover no-repeat;will-change:transform}
-.hero-veil{position:absolute;inset:0;background:linear-gradient(97deg,rgba(10,7,4,.96) 0%,rgba(10,7,4,.82) 34%,rgba(10,7,4,.38) 62%,rgba(10,7,4,.12) 82%,rgba(10,7,4,.42) 100%)}
-.hero-veil::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(to top,rgba(10,7,4,.92),rgba(10,7,4,0))}
-.hero-in{position:relative;z-index:2;flex:1;display:flex;align-items:center;width:100%;padding-top:130px;padding-bottom:64px}
-.hero-kicker{display:inline-flex;align-items:center;gap:14px;font-size:11.5px;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:26px}
-.hero-kicker::before{content:"";width:38px;height:1px;background:var(--gold-soft)}
-.hero h1{font-size:clamp(44px,6.4vw,86px);max-width:12.5em;text-wrap:pretty;color:#faf4e6;text-shadow:0 2px 40px rgba(0,0,0,.45)}
-.hero h1 em{font-style:italic;color:var(--gold-soft)}
-.hero .hero-lead{margin-top:24px;font-size:19.5px;max-width:31em;color:var(--night-soft);text-wrap:pretty}
-.hero-cta{display:flex;align-items:center;gap:28px;margin-top:42px;flex-wrap:wrap}
-.hero-note{margin-top:20px;font-size:13.5px;color:rgba(201,189,166,.75);max-width:34em}
-.hero-host{display:flex;align-items:center;gap:14px;margin-top:34px}
-.hero-host img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:top center;box-shadow:0 0 0 1px rgba(211,185,141,.55),0 6px 22px rgba(0,0,0,.5)}
-.hero-host span{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);font-weight:600}
-.hero-facts{position:relative;z-index:2;border-top:var(--night-hair);background:linear-gradient(to top,rgba(8,6,3,.55),rgba(8,6,3,.1))}
-.hero-facts .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
-.hf{padding:26px 20px;display:flex;align-items:baseline;justify-content:center;gap:14px}
-.hf+.hf{border-left:var(--night-hair)}
-.hf b{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:500;line-height:1;color:#f5edde}
-.hf span{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(211,185,141,.85);font-weight:600;line-height:1.5}
+/* hero: editorial */
+.hero{position:relative;overflow:hidden}
+.hero-in{display:grid;grid-template-columns:1.04fr .96fr;gap:72px;align-items:center;padding:64px 0 84px}
+.hero h1{font-size:clamp(44px,6.6vw,82px);text-wrap:pretty}
+.hero h1 em{font-style:italic;color:var(--gold-deep)}
+.hero .lead{font-size:19.5px;max-width:33em}
+.hero-cta{display:flex;align-items:center;gap:26px;margin-top:40px;flex-wrap:wrap}
+.hero-note{margin-top:18px;font-size:13.5px;color:var(--muted);max-width:34em}
+.hero-photo{position:relative;align-self:stretch;min-height:560px}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:22px}
+.hero-photo::after{content:"";position:absolute;inset:0;border-radius:22px;box-shadow:inset 0 0 0 1px rgba(132,101,58,.22)}
+
+/* полоса фактов */
+.band{border-top:var(--hair);border-bottom:var(--hair);background:var(--paper)}
+.band-in{display:grid;grid-template-columns:repeat(3,1fr)}
+.band-cell{padding:30px 20px;display:flex;align-items:baseline;justify-content:center;gap:14px}
+.band-cell+.band-cell{border-left:var(--hair)}
+.band-cell b{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:500;line-height:1;color:var(--ink)}
+.band-cell span{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:600;line-height:1.5}
 
 /* редакционный список причин */
 .ed{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
@@ -135,6 +114,14 @@ html.js .rv.in{opacity:1;transform:none}
 .myth .ic{margin-bottom:16px}
 .myth h3{font-size:25px;margin-bottom:10px}
 .myth p{color:var(--ink-soft);font-size:15.5px;text-wrap:pretty}
+
+/* знакомо: тихий список */
+.sym{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:52px;border-top:var(--hair)}
+.sym-item{display:flex;gap:20px;padding:34px 36px 34px 0;border-bottom:var(--hair)}
+.sym-item:nth-child(odd){padding-right:48px}
+.sym-item:nth-child(even){padding-left:48px;border-left:var(--hair)}
+.sym-item h3{font-size:24px;margin-bottom:6px}
+.sym-item p{color:var(--ink-soft);font-size:15.5px;text-wrap:pretty}
 
 /* наука */
 .levels{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:52px}
@@ -177,29 +164,22 @@ html.js .rv.in{opacity:1;transform:none}
 .bigrev cite{display:block;margin-top:24px;font-style:normal;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);font-weight:600}
 
 /* о Дарье */
-.about-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start;margin-top:14px}
-.about-photo{position:relative}
-.about-photo img{width:100%;border-radius:20px;display:block}
-.about-photo::after{content:"";position:absolute;inset:0;border-radius:20px;box-shadow:inset 0 0 0 1px rgba(132,101,58,.25)}
+.about-in{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:start;margin-top:14px}
 .about-story p{color:var(--ink-soft);font-size:17px;text-wrap:pretty;margin-top:16px}
 .about-story p.story-hard{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:23px;color:var(--ink);line-height:1.5}
 .sig-line{margin-top:30px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:40px;color:var(--gold-deep);line-height:1}
-.methods-title{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin:34px 0 8px}
+.methods-title{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:8px}
 .methods{border-top:var(--hair)}
 .method{display:flex;gap:18px;align-items:flex-start;padding:24px 0;border-bottom:var(--hair)}
 .method b{font-size:16px;font-weight:600;display:block;margin-bottom:2px}
 .method span{font-size:14.5px;color:var(--ink-soft);text-wrap:pretty}
 
-/* боли: ваша тема */
-.pains{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px}
-.pain{border:var(--hair);border-radius:16px;padding:26px 24px;background:var(--card);transition:.25s}
-.pain:hover{border-color:var(--gold);transform:translateY(-2px)}
-.pain h3{font-size:22px;margin:14px 0 4px}
-.pain p{color:var(--ink-soft);font-size:14.5px;text-wrap:pretty}
-.invite{margin-top:68px;text-align:center}
-.invite::before{content:"";display:block;width:44px;height:1px;background:var(--gold);margin:0 auto 28px}
-.invite p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(21px,2.7vw,29px);line-height:1.5;max-width:26em;margin:0 auto;text-wrap:pretty}
-.invite .arrow{margin-top:30px}
+/* запросы */
+.reqs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.req{border:var(--hair);border-radius:16px;padding:28px 26px;background:var(--card);transition:.25s}
+.req:hover{border-color:var(--gold);transform:translateY(-2px)}
+.req h3{font-size:22px;margin:14px 0 4px}
+.req p{color:var(--ink-soft);font-size:14.5px;text-wrap:pretty}
 
 /* отзывы */
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:56px}
@@ -213,7 +193,7 @@ html.js .rv.in{opacity:1;transform:none}
 /* цена */
 .price-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .price-left h2{max-width:10em}
-.price-card{background:var(--card);border:1px solid rgba(132,101,58,.35);border-radius:22px;padding:50px 52px;position:relative;box-shadow:0 30px 80px rgba(35,28,20,.08)}
+.price-card{background:var(--card);border:1px solid rgba(132,101,58,.35);border-radius:22px;padding:50px 52px;position:relative}
 .price-card::before{content:"";position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:1px solid rgba(132,101,58,.16);border-radius:14px;pointer-events:none}
 .price-tag{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
 .price-card h3{font-size:31px;margin:10px 0 2px}
@@ -238,13 +218,10 @@ html.js .rv.in{opacity:1;transform:none}
 .faq .faq-a{padding:0 4px 26px;color:var(--ink-soft);font-size:15.5px;max-width:44em;text-wrap:pretty}
 .faq .faq-a a{color:var(--gold-deep)}
 
-/* кино-финал: золотая нить */
-.final{position:relative;background:var(--night);color:var(--night-ink);text-align:center;padding:150px 0;overflow:hidden}
-.final-bg{position:absolute;inset:0;background:url(final-thread.jpg) center/cover no-repeat;opacity:.85}
-.final-veil{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(10,7,4,.35) 0%,rgba(10,7,4,.78) 100%)}
-.final .wrap{position:relative;z-index:2}
-.final h2{margin:0 auto;font-size:clamp(34px,5vw,58px);color:#faf4e6;max-width:16em;text-shadow:0 2px 40px rgba(0,0,0,.5)}
-.final p{margin:20px auto 40px;color:var(--night-soft);font-size:17.5px;max-width:34em;text-wrap:pretty}
+/* финал */
+.final{background:linear-gradient(160deg,#f4ecdc,#ecdfc7);border-top:var(--hair);border-bottom:var(--hair);text-align:center;padding:130px 0}
+.final h2{margin:0 auto;font-size:clamp(34px,5vw,58px)}
+.final p{margin:20px auto 40px;color:var(--ink-soft);font-size:17.5px;max-width:34em;text-wrap:pretty}
 
 /* портал */
 .portal{border:var(--hair);border-radius:20px;padding:46px 52px;display:flex;align-items:center;justify-content:space-between;gap:36px;background:var(--card)}
@@ -254,8 +231,6 @@ html.js .rv.in{opacity:1;transform:none}
 /* футер */
 .footer{background:var(--paper-3);padding:58px 0 42px}
 .f-top{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;flex-wrap:wrap}
-.footer .brand{color:var(--ink)}
-.footer .brand small{color:var(--muted)}
 .f-social{display:flex;flex-wrap:wrap;gap:10px;max-width:520px}
 .chip{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid rgba(132,101,58,.3);border-radius:10px;background:rgba(255,253,248,.7);font-size:13px;font-weight:500;text-decoration:none;transition:.2s;min-height:40px}
 .chip:hover{background:var(--wash);border-color:var(--gold)}
@@ -265,34 +240,28 @@ html.js .rv.in{opacity:1;transform:none}
 
 /* адаптив */
 @media(max-width:1020px){
-  .hero-bg{background-position:72% center}
+  .hero-in{grid-template-columns:1fr;gap:48px;padding:52px 0 64px}
+  .hero-photo{min-height:480px}
   .ed{grid-template-columns:1fr;gap:40px}
   .ed-left{position:static}
   .myths,.revs{grid-template-columns:1fr;gap:36px}
   .levels{grid-template-columns:repeat(2,1fr)}
   .numbers{grid-template-columns:repeat(3,1fr);gap:24px}
   .about-in,.price-wrap{grid-template-columns:1fr;gap:44px}
-  .about-photo{max-width:520px}
   .steps{grid-template-columns:1fr;gap:40px}
   .steps::before{display:none}
   .answer{padding:48px 40px}
-  .pains{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:640px){
   .sec{padding:80px 0}
-  .levels,.reqs,.numbers,.ba,.pains{grid-template-columns:1fr!important}
-  .hero{min-height:100svh}
-  .hero-in{padding-top:118px;padding-bottom:44px}
-  .hero-bg{background-position:70% center}
-  .hero-veil{background:linear-gradient(180deg,rgba(10,7,4,.9) 0%,rgba(10,7,4,.66) 45%,rgba(10,7,4,.42) 100%)}
-  .hero h1{font-size:clamp(38px,10.5vw,50px)}
-  .hero .hero-lead{font-size:17.5px}
+  .levels,.reqs,.numbers,.ba,.sym{grid-template-columns:1fr!important}
+  .sym-item{padding:26px 0!important;border-left:0!important}
+  .band-in{grid-template-columns:1fr}
+  .band-cell{justify-content:flex-start;padding:20px 4px}
+  .band-cell+.band-cell{border-left:0;border-top:var(--hair)}
+  .hero h1{font-size:clamp(40px,11vw,52px)}
+  .hero-photo{min-height:420px}
   .hero .btn{width:100%}
-  .hero-cta{gap:20px}
-  .hero-facts .wrap{grid-template-columns:1fr;padding:0 28px}
-  .hf{justify-content:flex-start;padding:14px 0}
-  .hf+.hf{border-left:0;border-top:var(--night-hair)}
-  .hf b{font-size:30px}
   .answer{padding:38px 26px;border-radius:20px}
   .answer::before{font-size:220px;top:-40px}
   .ed-item{grid-template-columns:52px 1fr;gap:16px;padding:26px 0}
@@ -302,23 +271,28 @@ html.js .rv.in{opacity:1;transform:none}
   .price-card{padding:38px 28px}
   .price-card::before{inset:10px}
   .portal{flex-direction:column;align-items:flex-start;padding:34px 26px}
-  .final{padding:110px 0}
+  .final{padding:92px 0}
   .f-top{flex-direction:column}
   .faq summary{font-size:20px}
   .pull{padding:0}
   body{font-size:16px}
-  .kicker,.hero-kicker{font-size:11px;letter-spacing:.2em}
-  .kicker::before,.hero-kicker::before{width:24px}
-  .invite{margin-top:48px}
+  .kicker{font-size:11px;letter-spacing:.2em}
+  .kicker::before{width:24px}
 }
-@media(max-width:430px){
-  .brand b{font-size:18px}
-  .brand small{font-size:8.5px;letter-spacing:.26em;white-space:nowrap}
-  .nav .btn{padding:11px 16px;font-size:11px;letter-spacing:.08em}
-  .nav-in{height:64px}
-  .hero-in{padding-top:104px}
-}
-@media(prefers-reduced-motion:reduce){html.js .rv{transition:none;opacity:1;transform:none}.hero-bg{transform:none!important}}
+@media(prefers-reduced-motion:reduce){html.js .rv{transition:none;opacity:1;transform:none}}
+
+/* боли: ваша тема */
+.pains{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px}
+.pain{border:var(--hair);border-radius:16px;padding:26px 24px;background:var(--card);transition:.25s}
+.pain:hover{border-color:var(--gold);transform:translateY(-2px)}
+.pain h3{font-size:22px;margin:14px 0 4px}
+.pain p{color:var(--ink-soft);font-size:14.5px;text-wrap:pretty}
+.invite{margin-top:68px;text-align:center}
+.invite::before{content:"";display:block;width:44px;height:1px;background:var(--gold);margin:0 auto 28px}
+.invite p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(21px,2.7vw,29px);line-height:1.5;max-width:26em;margin:0 auto;text-wrap:pretty}
+.invite .arrow{margin-top:30px}
+@media(max-width:1020px){.pains{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.pains{grid-template-columns:1fr!important}.invite{margin-top:48px}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -359,64 +333,62 @@ html.js .rv.in{opacity:1;transform:none}
   <symbol id="i-portal" viewBox="0 0 24 24"><path d="M3.5 21h17M5.5 21V9.5L12 3.5l6.5 6V21"/><path d="M9.5 21v-6a2.5 2.5 0 0 1 5 0v6"/></symbol>
 </svg>
 
-<header class="nav" id="nav">
+<header class="nav">
   <div class="wrap nav-in">
     <a class="brand" href="#top">
       <b>Дарья Ростовцева</b>
       <small>персональные сессии</small>
     </a>
-    <a class="btn btn-nav" href="#price">Записаться</a>
+    <a class="btn btn-gold" href="#price">Записаться</a>
   </div>
 </header>
 
 <main id="top">
 
 <section class="hero">
-  <div class="hero-bg" id="heroBg"></div>
-  <div class="hero-veil"></div>
   <div class="wrap hero-in">
     <div>
-      <div class="hero-kicker">Личная работа</div>
-      <h1>Старые сюжеты заканчиваются, <em>когда видна <span class="nb">их причина</span></em></h1>
-      <p class="hero-lead">60-90 минут один на один. Вместе находим то, с чего всё началось. Перемена чувствуется ещё на встрече.</p>
+      <div class="kicker">Личная работа</div>
+      <h1>Старые сюжеты заканчиваются, <em>когда видна <span class="nb">их причина</span></em></h1>
+      <p class="lead">60-90 минут один на один. Вместе находим то, с чего всё началось. Перемена чувствуется ещё на встрече.</p>
       <div class="hero-cta">
-        <a class="btn btn-solar" href="#price">Записаться на сессию</a>
-        <a class="arrow arrow-night" href="https://t.me/TheBodyMindCode_support" target="_blank" rel="noopener">Задать вопрос</a>
+        <a class="btn btn-gold" href="#price">Записаться на сессию</a>
+        <a class="arrow" href="https://t.me/TheBodyMindCode_support" target="_blank" rel="noopener">Задать вопрос</a>
       </div>
-      <p class="hero-note">Онлайн: Zoom или Telegram, из любой точки мира. Ответим и подберём время в переписке.</p>
-      <div class="hero-host">
-        <img src="daria.jpg" alt="Дарья Ростовцева">
-        <span>Ведёт Дарья Ростовцева</span>
-      </div>
+      <p class="hero-note">Онлайн: Zoom или Telegram, из любой точки мира. Ответим и подберём время в переписке.</p>
     </div>
-  </div>
-  <div class="hero-facts">
-    <div class="wrap">
-      <div class="hf"><b>10+</b><span>лет<br>практики</span></div>
-      <div class="hf"><b>500+</b><span>проведённых<br>сессий</span></div>
-      <div class="hf"><b>60-90</b><span>минут<br>работы</span></div>
+    <div class="hero-photo rv">
+      <img src="daria.jpg" alt="Дарья Ростовцева" fetchpriority="high">
     </div>
   </div>
 </section>
 
+<div class="band">
+  <div class="wrap band-in">
+    <div class="band-cell"><b>10+</b><span>лет<br>практики</span></div>
+    <div class="band-cell"><b>500+</b><span>проведённых<br>сессий</span></div>
+    <div class="band-cell"><b>60-90</b><span>минут<br>работы</span></div>
+  </div>
+</div>
+
 <section class="sec sec-2">
   <div class="wrap">
     <div class="kicker rv">Ваша тема</div>
-    <h2 class="rv">Какую боль вы хотели бы отпустить?</h2>
-    <p class="lead rv">У каждого из нас есть такая тема. Её носят в себе годами: к ней возвращаются мысли по вечерам, о ней хочется наконец поговорить с человеком, который услышит. Она есть и у сильных, и у самых благополучных. Это часть обычной жизни.</p>
+    <h2 class="rv">Какую боль вы хотели бы отпустить?</h2>
+    <p class="lead rv">У каждого из нас есть такая тема. Её носят в себе годами: к ней возвращаются мысли по вечерам, о ней хочется наконец поговорить с человеком, который услышит. Она есть и у сильных, и у самых благополучных. Это часть обычной жизни.</p>
     <div class="pains">
-      <div class="pain rv"><svg class="ic"><use href="#i-coins"/></svg><h3>Деньги и потолок</h3><p>доход застрял на одной и той же цифре, и пора её сдвинуть</p></div>
-      <div class="pain rv"><svg class="ic"><use href="#i-heart"/></svg><h3>Повторы в отношениях</h3><p>сюжеты похожи один на другой, а хочется тёплой, надёжной близости</p></div>
-      <div class="pain rv"><svg class="ic"><use href="#i-leaf"/></svg><h3>Тело и вес</h3><p>килограммы, зажимы, «снова с понедельника»: забота здесь давно нужнее строгости</p></div>
-      <div class="pain rv"><svg class="ic"><use href="#i-cloud"/></svg><h3>Нет сил с утра</h3><p>день ещё впереди, а батарейка уже почти пуста</p></div>
-      <div class="pain rv"><svg class="ic"><use href="#i-pulse"/></svg><h3>Тревога фоном</h3><p>даже в спокойные дни остаётся тихое напряжение, и оно порядком надоело</p></div>
-      <div class="pain rv"><svg class="ic"><use href="#i-moon"/></svg><h3>Пустота внутри</h3><p>снаружи всё неплохо, а радость куда-то ушла, и очень хочется её вернуть</p></div>
-      <div class="pain rv"><svg class="ic"><use href="#i-repeat"/></svg><h3>«Ничего не меняется»</h3><p>сделано уже так много, только картина вокруг прежняя</p></div>
-      <div class="pain rv"><svg class="ic"><use href="#i-compass"/></svg><h3>Своё дело</h3><p>то самое, от чего загораются глаза, всё ещё <span class="nb">где-то</span> ждёт</p></div>
+      <div class="pain rv"><svg class="ic"><use href="#i-coins"/></svg><h3>Деньги и потолок</h3><p>доход застрял на одной и той же цифре, и пора её сдвинуть</p></div>
+      <div class="pain rv"><svg class="ic"><use href="#i-heart"/></svg><h3>Повторы в отношениях</h3><p>сюжеты похожи один на другой, а хочется тёплой, надёжной близости</p></div>
+      <div class="pain rv"><svg class="ic"><use href="#i-leaf"/></svg><h3>Тело и вес</h3><p>килограммы, зажимы, «снова с понедельника»: забота здесь давно нужнее строгости</p></div>
+      <div class="pain rv"><svg class="ic"><use href="#i-cloud"/></svg><h3>Нет сил с утра</h3><p>день ещё впереди, а батарейка уже почти пуста</p></div>
+      <div class="pain rv"><svg class="ic"><use href="#i-pulse"/></svg><h3>Тревога фоном</h3><p>даже в спокойные дни остаётся тихое напряжение, и оно порядком надоело</p></div>
+      <div class="pain rv"><svg class="ic"><use href="#i-moon"/></svg><h3>Пустота внутри</h3><p>снаружи всё неплохо, а радость куда-то ушла, и очень хочется её вернуть</p></div>
+      <div class="pain rv"><svg class="ic"><use href="#i-repeat"/></svg><h3>«Ничего не меняется»</h3><p>сделано уже так много, только картина вокруг прежняя</p></div>
+      <div class="pain rv"><svg class="ic"><use href="#i-compass"/></svg><h3>Своё дело</h3><p>то самое, от чего загораются глаза, всё ещё <span class="nb">где-то</span> ждёт</p></div>
     </div>
     <div class="invite rv">
-      <p>Ко мне можно прийти с любой из этих тем. И с той, которой здесь нет. Я&nbsp;выслушаю, и решение мы найдём вместе.</p>
-      <a class="arrow" href="#price">Записаться на сессию</a>
+      <p>Ко мне можно прийти с любой из этих тем. И с той, которой здесь нет. Я выслушаю, и решение мы найдём вместе.</p>
+      <a class="arrow" href="#price">Записаться на сессию</a>
     </div>
   </div>
 </section>
@@ -425,23 +397,23 @@ html.js .rv.in{opacity:1;transform:none}
   <div class="wrap">
     <div class="ed">
       <div class="ed-left">
-        <div class="kicker rv">9 из 10 об этом не знают</div>
-        <h2 class="rv">Что незаметно тормозит перемены</h2>
-        <p class="lead rv">Пройдено многое: специалисты, курсы, книги, марафоны. Становилось легче, потом всё возвращалось. Причина обычно прячется совсем не&nbsp;там, где её ищут.</p>
+        <div class="kicker rv">9 из 10 об этом не знают</div>
+        <h2 class="rv">Что незаметно тормозит перемены</h2>
+        <p class="lead rv">Пройдено многое: специалисты, курсы, книги, марафоны. Становилось легче, потом всё возвращалось. Причина обычно прячется совсем не там, где её ищут.</p>
       </div>
       <div class="ed-list rv">
-        <div class="ed-item"><i>01</i><div><h3>Время само не лечит</h3><p>Можно ходить к психологу пять лет и остаться в той же точке. К тяжести человек просто привыкает. А тело всё помнит.</p></div></div>
-        <div class="ed-item"><i>02</i><div><h3>Знаний уже достаточно</h3><p>Тридцать книг прочитано, десять курсов за плечами. Про установки и сценарии вы знаете всё. Только между «понимаю» и <span class="nb">«живу по-другому»</span> лежит&nbsp;пропасть.</p></div></div>
-        <div class="ed-item"><i>03</i><div><h3>Мотивация быстро гаснет</h3><p>Вдохновились, начали, через три дня всё сошло на нет. Так работает сам механизм. Желание живёт на поверхности, а руль у подсознания.</p></div></div>
-        <div class="ed-item"><i>04</i><div><h3>Сила воли заканчивается</h3><p>Её хватает до вечера. Потом рука сама тянется к старому: включается давняя привычка, и она просто делает то, чему её <span class="nb">когда-то</span> научили.</p></div></div>
-        <div class="ed-item"><i>05</i><div><h3>Даже хороший психолог видит не всё</h3><p>Беседа достаёт только то, что вы сами осознаёте. А это малая часть картины. Главное спрятано глубже, куда слова не дотягиваются.</p></div></div>
+        <div class="ed-item"><i>01</i><div><h3>Время само не лечит</h3><p>Можно ходить к психологу пять лет и остаться в той же точке. К тяжести человек просто привыкает. А тело всё помнит.</p></div></div>
+        <div class="ed-item"><i>02</i><div><h3>Знаний уже достаточно</h3><p>Тридцать книг прочитано, десять курсов за плечами. Про установки и сценарии вы знаете всё. Только между «понимаю» и <span class="nb">«живу по-другому»</span> лежит пропасть.</p></div></div>
+        <div class="ed-item"><i>03</i><div><h3>Мотивация быстро гаснет</h3><p>Вдохновились, начали, через три дня всё сошло на нет. Так работает сам механизм. Желание живёт на поверхности, а руль у подсознания.</p></div></div>
+        <div class="ed-item"><i>04</i><div><h3>Сила воли заканчивается</h3><p>Её хватает до вечера. Потом рука сама тянется к старому: включается давняя привычка, и она просто делает то, чему её <span class="nb">когда-то</span> научили.</p></div></div>
+        <div class="ed-item"><i>05</i><div><h3>Даже хороший психолог видит не всё</h3><p>Беседа достаёт только то, что вы сами осознаёте. А это малая часть картины. Главное спрятано глубже, куда слова не дотягиваются.</p></div></div>
       </div>
     </div>
     <div class="answer rv">
-      <h3>А в чём тогда дело</h3>
-      <p>Внутри есть <strong>одна точка</strong>: старое решение, принятое давно, часто ещё в&nbsp;детстве. Оно и запустило всё, что теперь повторяется: страхи, откаты, ощущение потолка.</p>
-      <p>Пока причина скрыта, даже самые честные усилия уходят в песок. А когда она видна, хватает <strong>одной встречи</strong>, чтобы всё сдвинулось.</p>
-      <a class="arrow" href="#price">Записаться на сессию</a>
+      <h3>А в чём тогда дело</h3>
+      <p>Внутри есть <strong>одна точка</strong>: старое решение, принятое давно, часто ещё в детстве. Оно и запустило всё, что теперь повторяется: страхи, откаты, ощущение потолка.</p>
+      <p>Пока причина скрыта, даже самые честные усилия уходят в песок. А когда она видна, хватает <strong>одной встречи</strong>, чтобы всё сдвинулось.</p>
+      <a class="arrow" href="#price">Записаться на сессию</a>
     </div>
   </div>
 </section>
@@ -449,11 +421,11 @@ html.js .rv.in{opacity:1;transform:none}
 <section class="sec sec-2">
   <div class="wrap">
     <div class="kicker rv">Разберём по-честному</div>
-    <h2 class="rv">Три мысли, которые держат на месте</h2>
+    <h2 class="rv">Три мысли, которые держат на месте</h2>
     <div class="myths">
-      <div class="myth rv"><svg class="ic"><use href="#i-infinity"/></svg><h3>«Надо просто ещё поработать над собой»</h3><p>Разбирать себя можно годами, слой за слоем, и ходить кругами. Одно точное попадание меняет больше, чем сто часов разговоров.</p></div>
-      <div class="myth rv"><svg class="ic"><use href="#i-bolt"/></svg><h3>«Быстрых перемен не бывает»</h3><p>Ещё как случаются. Когда настоящая причина наконец видна, внутри отпускает сразу. Мозг перестраивается быстрее, чем принято думать.</p></div>
-      <div class="myth rv"><svg class="ic"><use href="#i-question"/></svg><h3>«Может, я просто <span class="nb">такой человек»</span></h3><p>Характер здесь ни при чём. Есть старая привычка, она приросла так плотно, что кажется вами. Увидите её со стороны, и удивитесь, сколько под ней живого.</p></div>
+      <div class="myth rv"><svg class="ic"><use href="#i-infinity"/></svg><h3>«Надо просто ещё поработать над собой»</h3><p>Разбирать себя можно годами, слой за слоем, и ходить кругами. Одно точное попадание меняет больше, чем сто часов разговоров.</p></div>
+      <div class="myth rv"><svg class="ic"><use href="#i-bolt"/></svg><h3>«Быстрых перемен не бывает»</h3><p>Ещё как случаются. Когда настоящая причина наконец видна, внутри отпускает сразу. Мозг перестраивается быстрее, чем принято думать.</p></div>
+      <div class="myth rv"><svg class="ic"><use href="#i-question"/></svg><h3>«Может, я просто такой <span class="nb">человек»</span></h3><p>Характер здесь ни при чём. Есть старая привычка, она приросла так плотно, что кажется вами. Увидите её со стороны, и удивитесь, сколько под ней живого.</p></div>
     </div>
   </div>
 </section>
@@ -461,21 +433,21 @@ html.js .rv.in{opacity:1;transform:none}
 <section class="sec">
   <div class="wrap">
     <div class="kicker rv">Немного науки</div>
-    <h2 class="rv">Почему это работает</h2>
-    <p class="lead rv">Кажется, что мы всё решаем головой. На деле она чаще объясняет то, что уже выбрано глубже: подсознанием и телом. Поэтому уговоры себя дают так мало. На сессии работаем со всеми четырьмя уровнями сразу.</p>
+    <h2 class="rv">Почему это работает</h2>
+    <p class="lead rv">Кажется, что мы всё решаем головой. На деле она чаще объясняет то, что уже выбрано глубже: подсознанием и телом. Поэтому уговоры себя дают так мало. На сессии работаем со всеми четырьмя уровнями сразу.</p>
     <div class="levels">
-      <div class="level rv"><svg class="ic"><use href="#i-sun"/></svg><h3>Сознание</h3><p>то, что вы про себя думаете и знаете</p></div>
-      <div class="level rv"><svg class="ic"><use href="#i-layers"/></svg><h3>Подсознание</h3><p>привычки и всё, что вы <span class="nb">когда-то</span> приняли за правду</p></div>
-      <div class="level rv"><svg class="ic"><use href="#i-body"/></svg><h3>Тело</h3><p>здесь старый опыт записан буквально, до зажимов</p></div>
-      <div class="level rv"><svg class="ic"><use href="#i-wave"/></svg><h3>Энергия</h3><p>то, что даёт силы двигаться дальше</p></div>
+      <div class="level rv"><svg class="ic"><use href="#i-sun"/></svg><h3>Сознание</h3><p>то, что вы про себя думаете и знаете</p></div>
+      <div class="level rv"><svg class="ic"><use href="#i-layers"/></svg><h3>Подсознание</h3><p>привычки и всё, что вы <span class="nb">когда-то</span> приняли за правду</p></div>
+      <div class="level rv"><svg class="ic"><use href="#i-body"/></svg><h3>Тело</h3><p>здесь старый опыт записан буквально, до зажимов</p></div>
+      <div class="level rv"><svg class="ic"><use href="#i-wave"/></svg><h3>Энергия</h3><p>то, что даёт силы двигаться дальше</p></div>
     </div>
     <div class="numbers">
       <div class="num rv"><b>95%</b><span>решений человек принимает&nbsp;неосознанно</span></div>
-      <div class="num rv"><b>6 сек</b><span>выбор готов раньше, чем вы о&nbsp;нём узнаёте</span></div>
-      <div class="num rv"><b>92%</b><span>людей чувствуют сдвиг ещё на сессии</span></div>
+      <div class="num rv"><b>6 сек</b><span>выбор готов раньше, чем вы о нём узнаёте</span></div>
+      <div class="num rv"><b>92%</b><span>людей чувствуют сдвиг ещё на сессии</span></div>
     </div>
     <div class="pull rv">
-      <p>Подсознание принимает 95% наших решений. За 6 секунд до того, как человек осознаёт свой выбор, мозг уже его сделал</p>
+      <p>Подсознание принимает 95% наших решений. За 6 секунд до того, как человек осознаёт свой выбор, мозг уже его сделал</p>
       <cite>Институт Макса Планка, исследования работы мозга</cite>
     </div>
   </div>
@@ -483,30 +455,30 @@ html.js .rv.in{opacity:1;transform:none}
 
 <section class="sec sec-2">
   <div class="wrap">
-    <div class="kicker rv">Как это устроено</div>
-    <h2 class="rv">Что происходит на сессии</h2>
+    <div class="kicker rv">Как это устроено</div>
+    <h2 class="rv">Что происходит на сессии</h2>
     <div class="steps">
-      <div class="step rv"><i>01</i><h3>Вижу</h3><p>Вы рассказываете, с чем пришли. Я слушаю и замечаю, что повторяется в ваших историях и где сюжет буксует. Корень почти всегда сидит глубже, чем кажется.</p></div>
-      <div class="step rv"><i>02</i><h3>Достаём</h3><p>Вместе доходим до момента, с которого всё началось. Часто это давнее решение, вы про&nbsp;него и&nbsp;не вспоминали. В эту минуту человек обычно говорит: «Точно. Вот же оно».</p></div>
-      <div class="step rv"><i>03</i><h3>Меняем</h3><p>Мягко убираем то, что держало: через состояние, тело и внимание. Становится легче и спокойнее ещё до конца встречи. Это и есть сдвиг, дальше он разворачивается сам.</p></div>
+      <div class="step rv"><i>01</i><h3>Вижу</h3><p>Вы рассказываете, с чем пришли. Я слушаю и замечаю, что повторяется в ваших историях и где сюжет буксует. Корень почти всегда сидит глубже, чем кажется.</p></div>
+      <div class="step rv"><i>02</i><h3>Достаём</h3><p>Вместе доходим до момента, с которого всё началось. Часто это давнее решение, вы про него и не вспоминали. В эту минуту человек обычно говорит: «Точно. Вот же оно».</p></div>
+      <div class="step rv"><i>03</i><h3>Меняем</h3><p>Мягко убираем то, что держало: через состояние, тело и внимание. Становится легче и спокойнее ещё до конца встречи. Это и есть сдвиг, дальше он разворачивается сам.</p></div>
     </div>
     <div class="ba rv">
       <div class="ba-col ba-before">
-        <h3>Что хочется отпустить</h3>
+        <h3>Что хочется отпустить</h3>
         <ul>
-          <li><svg class="ic"><use href="#i-record"/></svg><span>Ощущение, что жизнь идёт по кругу</span></li>
+          <li><svg class="ic"><use href="#i-record"/></svg><span>Ощущение, что жизнь идёт по кругу</span></li>
           <li><svg class="ic"><use href="#i-record"/></svg><span>Привычку жить по-старому, хотя всё давно понятно</span></li>
-          <li><svg class="ic"><use href="#i-record"/></svg><span>Тревожный фон, который не выключается даже в отпуске</span></li>
-          <li><svg class="ic"><use href="#i-record"/></svg><span>Усталость, что просыпается вместе с вами</span></li>
+          <li><svg class="ic"><use href="#i-record"/></svg><span>Тревожный фон, который не выключается даже в отпуске</span></li>
+          <li><svg class="ic"><use href="#i-record"/></svg><span>Усталость, что просыпается вместе с вами</span></li>
           <li><svg class="ic"><use href="#i-record"/></svg><span>Невидимый тормоз <span class="nb">где-то</span> внутри</span></li>
         </ul>
       </div>
       <div class="ba-col ba-after">
-        <h3>Что приходит взамен</h3>
+        <h3>Что приходит взамен</h3>
         <ul>
-          <li><svg class="ic"><use href="#i-check"/></svg>Причина видна, и она больше не командует</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Руки дошли до того, что годами&nbsp;откладывалось</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Внутри спокойно и ясно</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Причина видна, и она больше не командует</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Руки дошли до того, что годами откладывалось</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Внутри спокойно и ясно</li>
           <li><svg class="ic"><use href="#i-check"/></svg>Старые истории перестали&nbsp;повторяться</li>
           <li><svg class="ic"><use href="#i-check"/></svg>Понятно, куда идти дальше</li>
         </ul>
@@ -518,32 +490,29 @@ html.js .rv.in{opacity:1;transform:none}
 <section class="sec">
   <div class="wrap">
     <blockquote class="bigrev rv">
-      <p>За 15 лет терапии никто не заметил того, что ты увидела за 60 минут. Я потратила 200К на психологов. Результат дала одна сессия с тобой. Я наконец живу, а не выживаю.</p>
-      <cite>Марина, 37 лет</cite>
+      <p>За 15 лет терапии никто не заметил того, что ты увидела за 60 минут. Я потратила 200К на психологов. Результат дала одна сессия с тобой. Я наконец живу, а не выживаю.</p>
+      <cite>Марина, 37 лет</cite>
     </blockquote>
   </div>
 </section>
 
 <section class="sec sec-2">
   <div class="wrap">
-    <div class="kicker rv">О Дарье</div>
-    <h2 class="rv">Я прошла этот путь сама</h2>
+    <div class="kicker rv">О Дарье</div>
+    <h2 class="rv">Я прошла этот путь сама</h2>
     <div class="about-in">
-      <div class="about-photo rv">
-        <img src="daria.jpg" alt="Дарья Ростовцева" loading="lazy">
+      <div class="about-story">
+        <p class="story-hard rv">Декрет. 8 500 ₽ в месяц. Плюс 20 килограммов. Ребёнок на руках и ни одной подсказки, что делать.</p>
+        <p class="rv">Я выбралась. И построила жизнь, о которой раньше боялась даже мечтать: тело в форме, переезд к морю, свой бизнес, 14 стран.</p>
+        <p class="rv">Теперь провожу других этим же путём, только быстрее. Потому что знаю, где искать.</p>
+        <div class="sig-line rv">Дарья Ростовцева</div>
       </div>
       <div>
-        <div class="about-story">
-          <p class="story-hard rv">Декрет. 8 500 ₽ в месяц. Плюс 20 килограммов. Ребёнок на руках и ни одной подсказки, что делать.</p>
-          <p class="rv">Я выбралась. И построила жизнь, о которой раньше боялась даже мечтать: тело в форме, переезд к морю, свой бизнес, 14 стран.</p>
-          <p class="rv">Теперь провожу других этим же путём, только быстрее. Потому что знаю, где искать.</p>
-          <div class="sig-line rv">Дарья Ростовцева</div>
-        </div>
         <div class="methods-title rv">Соединяю несколько подходов</div>
         <div class="methods">
-          <div class="method rv"><svg class="ic"><use href="#i-hands"/></svg><span><b>CF Access Consciousness, 500+ сессий</b><span>мягкая работа с точками на голове и с убеждениями, которые мешают жить</span></span></div>
-          <div class="method rv"><svg class="ic"><use href="#i-brainwave"/></svg><span><b>Тета-хилинг</b><span>глубокое расслабление: мозг затихает, и старое легче отпустить</span></span></div>
-          <div class="method rv"><svg class="ic"><use href="#i-numbers"/></svg><span><b>Нумерология</b><span>разбор по датам рождения, быстрый способ увидеть, как вы устроены</span></span></div>
+          <div class="method rv"><svg class="ic"><use href="#i-hands"/></svg><span><b>CF Access Consciousness, 500+ сессий</b><span>мягкая работа с точками на голове и с убеждениями, которые мешают жить</span></span></div>
+          <div class="method rv"><svg class="ic"><use href="#i-brainwave"/></svg><span><b>Тета-хилинг</b><span>глубокое расслабление: мозг затихает, и старое легче отпустить</span></span></div>
+          <div class="method rv"><svg class="ic"><use href="#i-numbers"/></svg><span><b>Нумерология</b><span>разбор по датам рождения, быстрый способ увидеть, как вы устроены</span></span></div>
         </div>
       </div>
     </div>
@@ -553,11 +522,11 @@ html.js .rv.in{opacity:1;transform:none}
 <section class="sec">
   <div class="wrap">
     <div class="kicker rv">Отзывы</div>
-    <h2 class="rv">Что говорят после сессий</h2>
+    <h2 class="rv">Что говорят после сессий</h2>
     <div class="revs">
-      <div class="rev rv"><p>«Первый раз кто-то увидел настоящую меня. За час больше, чем за 2 года терапии. Как&nbsp;будто сняли пелену с&nbsp;глаз.»</p><div class="rev-who"><div class="ava">А</div><span><b>Анна</b><span>предприниматель, 34 года</span></span></div></div>
-      <div class="rev rv"><p>«Одна фраза, и я поняла, почему 10 лет бегала по кругу. Это невозможно объяснить, это нужно пережить.»</p><div class="rev-who"><div class="ava">Е</div><span><b>Елена</b><span>маркетолог, 29 лет</span></span></div></div>
-      <div class="rev rv"><p>«Был скептиком. Но после сессии как гора с&nbsp;плеч. Отношения с женой изменились за неделю. Без скандалов.»</p><div class="rev-who"><div class="ava">Д</div><span><b>Дмитрий</b><span>IT-директор, 41 год</span></span></div></div>
+      <div class="rev rv"><p>«Первый раз кто-то увидел настоящую меня. За час больше, чем за 2 года терапии. Как будто сняли пелену с глаз.»</p><div class="rev-who"><div class="ava">А</div><span><b>Анна</b><span>предприниматель, 34 года</span></span></div></div>
+      <div class="rev rv"><p>«Одна фраза, и я поняла, почему 10 лет бегала по кругу. Это невозможно объяснить, это нужно пережить.»</p><div class="rev-who"><div class="ava">Е</div><span><b>Елена</b><span>маркетолог, 29 лет</span></span></div></div>
+      <div class="rev rv"><p>«Был скептиком. Но после сессии как гора с плеч. Отношения с женой изменились за неделю. Без скандалов.»</p><div class="rev-who"><div class="ava">Д</div><span><b>Дмитрий</b><span>IT-директор, 41 год</span></span></div></div>
     </div>
   </div>
 </section>
@@ -566,22 +535,22 @@ html.js .rv.in{opacity:1;transform:none}
   <div class="wrap price-wrap">
     <div class="price-left">
       <div class="kicker rv">Стоимость</div>
-      <h2 class="rv">Встреча с Дарьей</h2>
-      <p class="lead rv">Один на один, 60-90 минут. Онлайн, в Zoom или Telegram.</p>
+      <h2 class="rv">Встреча с Дарьей</h2>
+      <p class="lead rv">Один на один, 60-90 минут. Онлайн, в Zoom или Telegram.</p>
     </div>
     <div class="price-card rv">
       <div class="price-tag">Персональная сессия</div>
-      <h3>Что входит</h3>
+      <h3>Что входит</h3>
       <ul class="price-list">
-        <li><svg class="ic"><use href="#i-check"/></svg>Разбираем ваш вопрос, тот самый, с которым вы пришли</li>
-        <li><svg class="ic"><use href="#i-check"/></svg>Находим, что вас держит и откуда это взялось</li>
-        <li><svg class="ic"><use href="#i-check"/></svg>Разницу почувствуете ещё по ходу разговора</li>
-        <li><svg class="ic"><use href="#i-check"/></svg>Простые упражнения, которые вы забираете с собой</li>
-        <li><svg class="ic"><use href="#i-check"/></svg>Вся встреча сохраняется на видео и остаётся у вас</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Разбираем ваш вопрос, тот самый, с которым вы пришли</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Находим, что вас держит и откуда это взялось</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Разницу почувствуете ещё по ходу разговора</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Простые упражнения, которые вы забираете с собой</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Вся встреча сохраняется на видео и остаётся у вас</li>
       </ul>
-      <div class="price-val"><b>12 500</b><span>₽ за сессию</span></div>
+      <div class="price-val"><b>12 500</b><span>₽ за сессию</span></div>
       <a class="btn btn-gold" href="https://payform.ru/8da7uRf/" target="_blank" rel="noopener">Записаться сейчас</a>
-      <p class="price-how">В Telegram <a href="https://t.me/TheBodyMindCode_support" target="_blank" rel="noopener">@TheBodyMindCode_support</a> отправьте слово «СЕССИЯ»: согласуем время, оплата по кнопке</p>
+      <p class="price-how">В Telegram <a href="https://t.me/TheBodyMindCode_support" target="_blank" rel="noopener">@TheBodyMindCode_support</a> отправьте слово «СЕССИЯ»: согласуем время, оплата по кнопке</p>
     </div>
   </div>
 </section>
@@ -589,24 +558,22 @@ html.js .rv.in{opacity:1;transform:none}
 <section class="sec">
   <div class="wrap">
     <div class="kicker rv">Вопросы</div>
-    <h2 class="rv">Коротко о главном</h2>
+    <h2 class="rv">Коротко о главном</h2>
     <div class="faq rv">
-      <details><summary>Как всё проходит?</summary><div class="faq-a">Онлайн, в Zoom или Telegram. 60-90 минут: веду я, вы честно отвечаете.</div></details>
-      <details><summary>Когда будет результат?</summary><div class="faq-a">Первый сдвиг обычно случается прямо на сессии: что-то отпускает, приходит ясность. Дальше изменения набирают ход, это дни и недели.</div></details>
-      <details><summary>Чем это отличается от психолога?</summary><div class="faq-a">Разговор в кабинете работает с тем, что вы осознаёте и можете рассказать. Я иду глубже: к старым решениям и к тому, что хранит тело.</div></details>
-      <details><summary>Подходит ли мужчинам?</summary><div class="faq-a">Да. Среди клиентов предприниматели, руководители, айтишники. Дело, отношения, состояние: эти темы у всех общие.</div></details>
-      <details><summary>Как записаться?</summary><div class="faq-a">Одно сообщение в Telegram <a href="https://t.me/TheBodyMindCode_support" target="_blank" rel="noopener">@TheBodyMindCode_support</a> со словом «СЕССИЯ». Мы ответим, уточним ваш вопрос и предложим удобное время.</div></details>
+      <details><summary>Как всё проходит?</summary><div class="faq-a">Онлайн, в Zoom или Telegram. 60-90 минут: веду я, вы честно отвечаете.</div></details>
+      <details><summary>Когда будет результат?</summary><div class="faq-a">Первый сдвиг обычно случается прямо на сессии: что-то отпускает, приходит ясность. Дальше изменения набирают ход, это дни и недели.</div></details>
+      <details><summary>Чем это отличается от психолога?</summary><div class="faq-a">Разговор в кабинете работает с тем, что вы осознаёте и можете рассказать. Я иду глубже: к старым решениям и к тому, что хранит тело.</div></details>
+      <details><summary>Подходит ли мужчинам?</summary><div class="faq-a">Да. Среди клиентов предприниматели, руководители, айтишники. Дело, отношения, состояние: эти темы у всех общие.</div></details>
+      <details><summary>Как записаться?</summary><div class="faq-a">Одно сообщение в Telegram <a href="https://t.me/TheBodyMindCode_support" target="_blank" rel="noopener">@TheBodyMindCode_support</a> со словом «СЕССИЯ». Мы ответим, уточним ваш вопрос и предложим удобное время.</div></details>
     </div>
   </div>
 </section>
 
 <section class="final">
-  <div class="final-bg"></div>
-  <div class="final-veil"></div>
   <div class="wrap">
-    <h2 class="rv">Можно искать причину ещё год.<br>Или увидеть её за <span class="nb">60-90 минут.</span></h2>
-    <p class="rv">92 из 100 чувствуют сдвиг прямо на встрече.</p>
-    <a class="btn btn-solar rv" href="#price">Записаться на сессию</a>
+    <h2 class="rv">Можно искать причину ещё год.<br>Или увидеть её за <span class="nb">60-90 минут.</span></h2>
+    <p class="rv">92 из 100 чувствуют сдвиг прямо на встрече.</p>
+    <a class="btn btn-gold rv" href="#price">Записаться на сессию</a>
   </div>
 </section>
 
@@ -616,7 +583,7 @@ html.js .rv.in{opacity:1;transform:none}
       <div class="portal-txt">
         <div class="kicker" style="margin-bottom:0">Часть большого портала</div>
         <h3>Архитектура сознания</h3>
-        <p>Все программы, статьи и практики собраны в одном месте. Один вход, доступ ко всему.</p>
+        <p>Все программы, статьи и практики собраны в одном месте. Один вход, доступ ко всему.</p>
       </div>
       <a class="btn btn-ghost" href="https://thebodymindcode.github.io/soznanie/" target="_blank" rel="noopener"><svg class="ic" style="width:17px;height:17px"><use href="#i-portal"/></svg>Открыть портал</a>
     </div>
@@ -651,14 +618,6 @@ html.js .rv.in{opacity:1;transform:none}
 document.documentElement.classList.add('js');
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-const nav=document.getElementById('nav');
-const onScroll=()=>{nav.classList.toggle('scrolled',window.scrollY>40)};
-onScroll();addEventListener('scroll',onScroll,{passive:true});
-const bg=document.getElementById('heroBg');
-const fine=matchMedia('(min-width:1021px)');const calm=matchMedia('(prefers-reduced-motion:reduce)');
-if(bg&&fine.matches&&!calm.matches){
-  addEventListener('scroll',()=>{const y=window.scrollY;if(y<innerHeight)bg.style.transform=`translateY(${y*.18}px)`},{passive:true});
-}
 </script>
 </body>
 </html>
